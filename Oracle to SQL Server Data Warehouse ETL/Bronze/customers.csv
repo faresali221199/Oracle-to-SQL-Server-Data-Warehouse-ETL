@@ -1,0 +1,51 @@
+customer_id,first_name,last_name,email,city
+1,Ahmed,Ali,ahmed@gmail.com,Cairo
+2,Mohamed,Hassan,mohamed@gmail.com,Giza
+3,Omar,Mahmoud,omar@gmail.com,Alexandria
+4,Sara,Ibrahim,sara.ibrahim@gmail.com,Luxor
+5,Youssef,Nabil,youssef.nabil@yahoo.com,Aswan
+6,Mona,Adel,mona.adel@gmail.com,Mansoura
+7,Khaled,Samir,khaled.samir@outlook.com,Tanta
+8,Nour,Elsayed,nour.elsayed@gmail.com,Suez
+9,Hana,Yasser,hana.yasser@gmail.com,Ismailia
+10,Karim,Fouad,karim.fouad@gmail.com,Cairo
+11,Laila,Kamal,laila.kamal@yahoo.com,Port Said
+12,Mostafa,Rashad,mostafa.rashad@gmail.com,Fayoum
+13,Dina,Hatem,dina.hatem@gmail.com,Zagazig
+14,Amr,Zaki,amr.zaki@hotmail.com,Minya
+15,Rana,Fathy,rana.fathy@gmail.com,Qena
+16,Tarek,Saleh,tarek.saleh@gmail.com,Sohag
+17,Mariam,Ashraf,mariam.ashraf@gmail.com,Beni Suef
+18,Hassan,Gamal,hassan.gamal@yahoo.com,Damietta
+19,Salma,Wael,salma.wael@gmail.com,Giza
+20,Bassel,Sherif,bassel.sherif@outlook.com,Cairo
+21,Farida,Kamal,farida.kamal@gmail.com,Alexandria
+22,Mahmoud,Ezzat,mahmoud.ezzat@yahoo.com,Luxor
+23,Reem,Hosny,reem.hosny@gmail.com,Aswan
+24,Ziad,Fouad,ziad.fouad@hotmail.com,Mansoura
+25,Nada,Adel,nada.adel@gmail.com,Tanta
+26,Sherif,Nabil,sherif.nabil@outlook.com,Suez
+27,Yara,Samir,yara.samir@gmail.com,Ismailia
+28,Ali,Mostafa,ali.mostafa@yahoo.com,Port Said
+29,Heba,Rashad,heba.rashad@gmail.com,Fayoum
+30,Kareem,Hatem,kareem.hatem@gmail.com,Zagazig
+31,Ghada,Zaki,ghada.zaki@hotmail.com,Minya
+32,Adel,Fathy,adel.fathy@gmail.com,Qena
+33,Menna,Saleh,menna.saleh@gmail.com,Sohag
+34,Ramy,Ashraf,ramy.ashraf@yahoo.com,Beni Suef
+35,Esraa,Gamal,esraa.gamal@gmail.com,Damietta
+36,Walid,Wael,walid.wael@outlook.com,Giza
+37,Rania,Sherif,rania.sherif@gmail.com,Cairo
+38,Tamer,Kamal,tamer.kamal@yahoo.com,Alexandria
+39,Doaa,Ezzat,doaa.ezzat@gmail.com,Luxor
+40,Ehab,Hosny,ehab.hosny@hotmail.com,Aswan
+41,Shaimaa,Fouad,shaimaa.fouad@gmail.com,Mansoura
+42,Hazem,Adel,hazem.adel@outlook.com,Tanta
+43,Nourhan,Nabil,nourhan.nabil@gmail.com,Suez
+44,Islam,Samir,islam.samir@yahoo.com,Ismailia
+45,Aya,Mostafa,aya.mostafa@gmail.com,Port Said
+46,Basma,Rashad,basma.rashad@gmail.com,Fayoum
+47,Maged,Hatem,maged.hatem@hotmail.com,Zagazig
+48,Passant,Zaki,passant.zaki@gmail.com,Minya
+49,Fady,Fathy,fady.fathy@yahoo.com,Qena
+50,Habiba,Saleh,habiba.saleh@gmail.com,Sohag
