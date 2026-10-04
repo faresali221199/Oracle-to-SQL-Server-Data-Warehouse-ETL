@@ -1,299 +1,290 @@
-🚀 End-to-End Data Engineering Pipeline
+# Oracle to SQL Server Data Warehouse ETL
 
-An end-to-end Data Engineering project that builds a complete ETL pipeline from Oracle to SQL Server, following a Medallion Architecture and delivering business-ready data to a Data Analyst through the Gold Layer.
+## 📌 Project Overview
 
-🏗️ Project Architecture
+This project implements an end-to-end **Data Engineering ETL Pipeline** that extracts data from an Oracle database, transforms and cleans the data using Python, and loads it into a structured **SQL Server Data Warehouse**.
 
-Oracle → Python ETL → Bronze → Silver → Gold → Power BI
+The pipeline follows a **Medallion Architecture** approach to organize the data into Bronze, Silver, and Gold layers, producing clean and analysis-ready data for Business Intelligence and Power BI reporting.
 
+---
 
+## 🏗️ Project Architecture
 
-📌 Project Overview
+![Project Architecture](./image.png)
 
-This project is designed to transform raw operational data into clean, structured, and analysis-ready data.
+---
 
-The pipeline starts with data extracted from an Oracle database, processes it using Python, and stores the different processing stages in SQL Server.
+## 🔄 ETL Pipeline
 
-The final Gold Layer is provided to the Data Analyst for reporting and visualization using Power BI.
+The project follows three main stages:
 
-🔄 Data Pipeline
+### 1. Extract
 
-1️⃣ Source — Oracle
+Data is extracted from the source **Oracle Database**.
 
-The source system contains the main business entities:
+The extraction process collects data from multiple source tables and prepares it for further processing.
 
-Customers
+### 2. Transform
 
-Orders
+Python is used to process and transform the extracted data.
 
-Products
+The transformation process includes:
 
-The source data is provided in XML format.
+* Data cleaning
+* Handling missing values
+* Removing duplicates
+* Data type conversion
+* Data validation
+* Data standardization
+* Business rule implementation
+* Preparing data for dimensional modeling
 
-2️⃣ 🥉 Bronze Layer
+### 3. Load
 
-The Bronze Layer stores the extracted data in its raw form.
+The transformed data is loaded into **SQL Server Data Warehouse** tables.
 
-Responsibilities:
+The final warehouse structure is designed to support:
 
-Store raw data
+* Business Intelligence
+* Data Analysis
+* Reporting
+* Power BI dashboards
 
-Preserve source information
+---
 
-No major transformations
+## 🥉 Bronze Layer
 
-Maintain data traceability
+The Bronze Layer stores the extracted data with minimal transformation.
 
-3️⃣ 🥈 Silver Layer
+Its main purpose is to preserve the source data and provide a reliable raw-data layer for the ETL process.
 
-The Silver Layer prepares the raw data for analytical processing.
+### Responsibilities
 
-Transformations include:
+* Store raw extracted data
+* Maintain source-level information
+* Provide traceability
+* Serve as the first stage of the data pipeline
 
-Data cleaning
+---
 
-Data type conversion
+## 🥈 Silver Layer
 
-Handling missing values
+The Silver Layer contains cleaned and transformed data.
 
-Removing duplicates
+At this stage, the pipeline performs data quality and transformation operations.
 
-Data standardization
+### Transformations
 
-Data validation
+* Cleaning invalid records
+* Handling NULL values
+* Removing duplicate records
+* Standardizing formats
+* Converting data types
+* Applying business rules
+* Validating data consistency
 
-4️⃣ 🥇 Gold Layer
+---
 
-The Gold Layer contains the final business-ready data.
+## 🥇 Gold Layer
 
-Responsibilities:
+The Gold Layer contains business-ready data designed for analytics and reporting.
 
-Data modeling
+This layer provides structured data that can be directly consumed by:
 
-Combining required datasets
+* Power BI
+* SQL Analytics
+* Business Intelligence applications
+* Reporting systems
 
-Business transformations
+---
 
-Aggregations
+## 🛠️ Technologies Used
 
-Preparing analytical tables
+| Technology      | Purpose                                      |
+| --------------- | -------------------------------------------- |
+| Python          | ETL development and data transformation      |
+| Pandas          | Data manipulation and processing             |
+| Oracle Database | Source database                              |
+| SQL Server      | Data Warehouse                               |
+| SQL             | Data extraction, transformation and analysis |
+| Power BI        | Data visualization and reporting             |
+| Git & GitHub    | Version control and project management       |
 
-The Gold Layer is the main data source for the Data Analyst.
+---
 
-📊 Data Analysis
+## 🐍 Python ETL
 
-The Data Analyst has access to the Gold Layer only.
+Python is responsible for orchestrating the ETL workflow.
 
-The Gold Layer is connected to Power BI to create:
+The pipeline uses Python to:
 
-Business KPIs
+1. Connect to Oracle
+2. Extract source data
+3. Load raw data into the Bronze Layer
+4. Clean and transform the data
+5. Apply business rules
+6. Load transformed data into Silver
+7. Prepare analytical datasets
+8. Load the Gold Layer
 
-Sales Analysis
+---
 
-Customer Analysis
+## 🗄️ Data Warehouse
 
-Product Analysis
+The SQL Server Data Warehouse is designed to provide a centralized analytical environment.
 
-Order Analysis
+The warehouse separates:
 
-Aggregated Metrics
+* Raw data
+* Cleaned data
+* Business-ready data
 
-Interactive Dashboards
+This separation improves:
 
-⚙️ ETL Process
+* Data quality
+* Maintainability
+* Scalability
+* Performance
+* Analytics readiness
 
-The ETL pipeline is developed using Python.
+---
 
-Extract
-   ↓
-Oracle
-   ↓
-Bronze
-   ↓
-Clean & Transform
-   ↓
-Silver
-   ↓
-Model & Aggregate
-   ↓
-Gold
-   ↓
-Data Analyst
-   ↓
-Power BI
+## 📊 Power BI
 
-🛠️ Technologies
+The final Gold Layer is designed to be consumed by Power BI.
 
-Technology
+Power BI can connect to the warehouse and provide interactive dashboards for:
 
-Usage
+* KPIs
+* Trends
+* Performance analysis
+* Business insights
+* Data exploration
 
-Python
+---
 
-ETL & Data Processing
+## 🔍 Data Quality
 
-Oracle
+The ETL pipeline includes several data quality checks:
 
-Source Database
+* Duplicate detection
+* NULL value handling
+* Data type validation
+* Invalid record detection
+* Format standardization
+* Referential consistency
+* Business rule validation
 
-SQL Server
+These steps ensure that the final analytical data is reliable and ready for reporting.
 
-Data Warehouse
+---
 
-SQL
+## 📁 Project Structure
 
-Data Processing & Modeling
-
-XML
-
-Source Data Format
-
-Power BI
-
-Data Analysis & Visualization
-
-🔐 Data Access Architecture
-
-The project follows a layered access architecture:
-
-                    SQL Server
-                        │
-          ┌─────────────┼─────────────┐
-          │             │             │
-       Bronze         Silver         Gold
-          │             │             │
-          │             │             │
-          └─────────────┴─────────────┘
-                                      │
-                                      ▼
-                              Data Analyst
-                                      │
-                                      ▼
-                                  Power BI
-
-The Data Analyst works with the Gold Layer, keeping the raw and transformation layers separated from the analytical environment.
-
-🎯 Project Objectives
-
-Build an end-to-end ETL pipeline
-
-Integrate Oracle with SQL Server
-
-Implement Medallion Architecture
-
-Process data using Python
-
-Separate raw, cleaned, and business-ready data
-
-Build an analytical Gold Layer
-
-Provide controlled access to the Data Analyst
-
-Prepare data for Power BI reporting
-
-📁 Project Structure
-
-Data-Engineering-Project/
-│
-├── Bronze/
-│   └── Raw Data
-│
-├── Silver/
-│   └── Cleaned & Transformed Data
-│
-├── Gold/
-│   └── Analytical Data
-│
-├── ETL/
-│   └── Python Scripts
-│
-├── Documentation/
-│   └── Architecture
-│
-├── PowerBI/
-│   └── Dashboard
+```text
+Oracle-to-SQLServer-Data-Warehouse/
 │
 ├── image.png
-└── README.md
+├── README.md
+│
+├── data/
+│   ├── bronze/
+│   ├── silver/
+│   └── gold/
+│
+├── etl/
+│   ├── extract/
+│   ├── transform/
+│   └── load/
+│
+├── sql/
+│   ├── bronze/
+│   ├── silver/
+│   └── gold/
+│
+├── notebooks/
+│
+└── requirements.txt
+```
 
-📈 End-to-End Workflow
+---
 
-Oracle
-  │
-  ▼
-Extract
-  │
-  ▼
-Bronze Layer
-  │
-  ▼
-Clean & Transform
-  │
-  ▼
-Silver Layer
-  │
-  ▼
-Model & Aggregate
-  │
-  ▼
-Gold Layer
-  │
-  ▼
-Data Analyst
-  │
-  ▼
-Power BI
-  │
-  ▼
-Business Insights
+## 🚀 ETL Workflow
 
-👨‍💻 Project Focus
+```text
+Oracle Database
+       │
+       ▼
+   Extraction
+       │
+       ▼
+ Bronze Layer
+       │
+       ▼
+ Transformation
+       │
+       ▼
+ Silver Layer
+       │
+       ▼
+ Business Rules
+       │
+       ▼
+  Gold Layer
+       │
+       ▼
+   Power BI
+```
 
-This project demonstrates practical Data Engineering concepts including:
+---
 
-ETL Pipelines
+## 🎯 Project Objectives
 
-Data Warehousing
+The main objectives of this project are:
 
-Medallion Architecture
+* Build a complete ETL pipeline
+* Integrate Oracle with SQL Server
+* Apply Data Engineering concepts
+* Implement Medallion Architecture
+* Perform data cleaning and transformation
+* Build a structured Data Warehouse
+* Prepare data for Business Intelligence
+* Create an analysis-ready data layer for Power BI
 
-Data Cleaning
+---
 
-Data Transformation
+## 📚 Key Data Engineering Concepts
 
-Data Modeling
+This project demonstrates practical experience with:
 
-SQL Server
+* ETL Pipelines
+* Data Warehousing
+* Medallion Architecture
+* Data Integration
+* Data Cleaning
+* Data Transformation
+* Dimensional Modeling
+* SQL Server
+* Oracle Database
+* Python ETL
+* Data Quality
+* Business Intelligence
+* Power BI
 
-Python ETL
+---
 
-Analytical Data Preparation
+## 👨‍💻 Author
 
-Power BI Integration
+**Fares Ali El-Sheikh**
 
-🚀 Future Improvements
+Electrical Engineering Student | Data Engineering Enthusiast
 
-Incremental Data Loading
+### Skills
 
-ETL Scheduling
+`Python` `SQL` `ETL` `Data Engineering` `SQL Server` `Oracle` `Power BI` `Pandas` `Data Warehousing` `Data Modeling`
 
-Pipeline Monitoring
+---
 
-Data Quality Checks
+## ⭐ Project
 
-Error Logging
-
-Automated Data Validation
-
-Performance Optimization
-
-Role-Based Access Control
-
-👤 Author
-
-Fares Ali El-Sheikh
-
-Electrical & Computer Control Engineering Student
-Data Engineering | Python | SQL | Power BI | ETL
-
-⭐ If you find this project useful, feel free to explore the repository.
+This project was developed as a practical implementation of an end-to-end **Data Engineering workflow**, demonstrating how raw data can be transformed into a structured and analytics-ready Data Warehouse.
